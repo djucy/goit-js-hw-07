@@ -1,5 +1,5 @@
 const counterValue = document.querySelector('#value');
-// counterValue.textContent = Number(counterValue.textContent)
+
 
 
 const btnIncrement = document.querySelector('button[data-action="increment"]');
