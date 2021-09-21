@@ -37,24 +37,5 @@ console.log(galleryRef)
 
 
 
-
-
-// const listImgRef = images.forEach(image => {
-//   const imgRef = document.createElement('img');
-//   imgRef.src = image.url;
-//   imgRef.alt = image.alt;
-
-//   const itemRef = document.createElement('li');
-//   itemRef.insertAdjacentHTML('beforeend', imgRef)
-//   console.log(itemRef);
-
-//   galleryRef.insertAdjacentHTML('beforeend', itemRef);
-
-
-// })
-
-// console.log(listImgRef);
-
-
   
 
