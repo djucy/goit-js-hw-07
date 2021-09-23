@@ -1,21 +1,20 @@
-const inputRef = document.querySelectorAll('#validation-input');
+const inputRef = document.querySelector('#validation-input');
 
-console.log(inputRef);
-console.log(inputRef[0]);
-
-inputRef[0].addEventListener ('blur', onInputBlur);
-
+inputRef.addEventListener ('blur', onInputBlur);
 
 function onInputBlur(event) {
     const eventTargetValueLength = event.currentTarget.value.length;
-    const inputDatasetLength = Number(inputRef[0].dataset.length);
+    const inputDatasetLength = Number(inputRef.dataset.length);
 
     if (eventTargetValueLength === inputDatasetLength) {
-        inputRef[0].classList.add('valid');
-        inputRef[0].classList.remove('invalid');
+        toggleClass(inputRef, 'valid', 'invalid')
     }
     else {
-       inputRef[0].classList.remove('valid');
-        inputRef[0].classList.add('invalid');
+        toggleClass(inputRef, 'invalid', 'valid')
     }
- }
+};
+ 
+function toggleClass(ref, active, inactive) {
+    ref.classList.add(active);
+    ref.classList.remove(inactive);
+};
